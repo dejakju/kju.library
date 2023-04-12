@@ -1,0 +1,18 @@
+##base _KjuBase
+##bias 30
+##public
+KJU_AND(a,b)(d0,d1)
+KJU_OR(a,b)(d0,d1)
+KJU_NOT(a)(d0)
+KJU_NAND(a,b)(d0,d1)
+KJU_NOR(a,b)(d0,d1)
+KJU_XOR(a,b)(d0,d1)
+KJU_XNOR(a,b)(d0,d1)
+KJU_IMP(a,b)(d0,d1)
+KJU_ABS(a)(d0)
+KJU_MAX(a,b)(d0,d1)
+KJU_MIN(a,b)(d0,d1)
+KJU_SWAP(a,b)(d0,d1)
+KJU_REQUEST(t,b,g)(d1,d2,d3)
+KJU_REBOOT()()
+##end

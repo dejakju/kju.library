@@ -1,0 +1,18 @@
+*
+*** $VER: kju.i 1.0 (12.04.2023)
+*
+
+KJU_AND = -$1E
+KJU_OR = -$24
+KJU_NOT = -$2A
+KJU_NAND = -$30
+KJU_NOR = -$36
+KJU_XOR = -$3C
+KJU_XNOR = -$42
+KJU_IMP = -$48
+KJU_ABS = -$4E
+KJU_MAX = -$54
+KJU_MIN = -$5A
+KJU_SWAP = -$60
+KJU_REQUEST = -$66
+KJU_REBOOT = -$6C

@@ -1,0 +1,5 @@
+FROM LIB:c.o "kju_test.o"
+TO "kju_test"
+LIB LIB:scm.lib
+    LIB:sc.lib LIB:amiga.lib
+

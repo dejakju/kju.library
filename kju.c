@@ -29,61 +29,73 @@
  ***	FUNCTION DEFINITIONS
  */
 
+// Logical AND
 long KJU_AND(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return a && b;
 }
 
+// Logical OR
 long KJU_OR(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return a || b;
 }
 
+// Logical NOT
 long KJU_NOT(register __d0 long a, register __a6 KjuBase *base)
 {
 	return !a;
 }
 
+// Logical NOT AND
 long KJU_NAND(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return !(a && b);
 }
 
+// Logical NOT OR
 long KJU_NOR(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return !(a || b);
 }
 
+// Logical Exclusive OR
 long KJU_XOR(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return !a && b || a && !b;
 }
 
+// Logical Exclusive NOT OR
 long KJU_XNOR(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return a && b || !a && !b;
 }
 
+// Logical Imperative
 long KJU_IMP(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return !(a && !b)
 }
 
+// Return Absolute Value
 long KJU_ABS(register __d0 long a, register __a6 KjuBase *base)
 {
 	return (a < 0) ? -a : a;
 }
 
+// Return Maximum Value
 long KJU_MAX(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return (a > b) ? a : b;
 }
 
+// Return Minimum Value
 long KJU_MIN(register __d0 long a, register __d1 long b, register __a6 KjuBase *base)
 {
 	return (a < b) ? a : b;
 }
 
+// Swap numeric values without a temporary variable
 void KJU_SWAP(register __d0 long *a, register __d1 long *b)
 {
 	*a = *a + *b;
@@ -96,6 +108,7 @@ void KJU_SWAP(register __d0 long *a, register __d1 long *b)
  ***	AMIGA-OS FUNCTIONS
  */
 
+// Open a Intuition requester with provided title, body and gadget text
 ULONG KJU_REQUEST(register __d1 UBYTE *reqtitle, register __d2 UBYTE *body, register __d3 UBYTE *gadgets)
 {
 	UBYTE *title = reqtitle;
@@ -112,6 +125,7 @@ ULONG KJU_REQUEST(register __d1 UBYTE *reqtitle, register __d2 UBYTE *body, regi
 	return ((ULONG) EasyRequestArgs(NULL, &estr, NULL, NULL));
 }
 
+// Reboot the system
 void KJU_REBOOT()
 {
 	ULONG res;

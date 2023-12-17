@@ -1,2 +1,2 @@
 # kju.library
-An AmigaOS Library
+An AmigaOS Library example (educational purpose only)
